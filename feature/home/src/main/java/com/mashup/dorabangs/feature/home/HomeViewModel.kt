@@ -48,6 +48,42 @@ constructor(
         }
     }
 
+    fun showMoreButtonBottomSheet() = intent {
+        reduce {
+            state.copy(isShowMoreButtonSheet = true)
+        }
+    }
+
+    fun dismissMoreButtonBottomSheet() = intent {
+        reduce {
+            state.copy(isShowMoreButtonSheet = false)
+        }
+    }
+
+    fun showDialog() = intent {
+        reduce {
+            state.copy(isShowDialog = true)
+        }
+    }
+
+    fun dismissDialog() = intent {
+        reduce {
+            state.copy(isShowDialog = false)
+        }
+    }
+
+    fun showMovingFolderBottomSheet() = intent {
+        reduce {
+            state.copy(isShowMovingFolderSheet = true)
+        }
+    }
+
+    fun dismissMovingFolderBottomSheet() = intent {
+        reduce {
+            state.copy(isShowMovingFolderSheet = false)
+        }
+    }
+
     init {
         intent {
             reduce {
@@ -59,20 +95,23 @@ constructor(
                         ),
                         DoraChipUiModel(
                             title = "하이?",
+                            icon = R.drawable.link_icon,
                         ),
                         DoraChipUiModel(
                             title = "바이?",
+                            icon = R.drawable.link_icon,
                         ),
                         DoraChipUiModel(
                             title = "바이?",
+                            icon = R.drawable.link_icon,
                         ),
                         DoraChipUiModel(
                             title = "바이?",
-                            icon = R.drawable.ic_plus,
+                            icon = R.drawable.link_icon,
                         ),
                         DoraChipUiModel(
                             title = "전체 99+",
-                            icon = R.drawable.ic_plus,
+                            icon = R.drawable.link_icon,
                         ),
                         DoraChipUiModel(
                             title = "하이?",
@@ -85,7 +124,7 @@ constructor(
                         ),
                         DoraChipUiModel(
                             title = "바이?",
-                            icon = R.drawable.ic_plus,
+                            icon = R.drawable.link_icon,
                         ),
                     ),
                     feedCards = listOf(
